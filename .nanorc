@@ -1,0 +1,42 @@
+bind F1 linter all
+
+include ./.sibyl-nano/sintaxhl.nanorc/*.nanorc
+
+extendsyntax C linter sibyl-lint clang-tidy
+extendsyntax C formatter sibyl-fmt clang-format
+
+extendsyntax Elixir linter sibyl-lint credo
+extendsyntax Elixir formatter sibyl-fmt mix-format
+
+extendsyntax GO linter sibyl-lint staticcheck
+extendsyntax GO formatter sibyl-fmt go-fmt
+
+extendsyntax HTML linter sibyl-lint htmlhint
+extendsyntax HTML formatter sibyl-fmt prettier
+
+extendsyntax CSS linter sibyl-lint stylelint
+extendsyntax CSS formatter sibyl-fmt prettier
+
+extendsyntax JSON linter sibyl-lint jsonlint
+extendsyntax JSON formatter sibyl-fmt prettier
+
+extendsyntax JavaScript linter sibyl-lint eslint
+extendsyntax JavaScript formatter sibyl-fmt eslint
+
+extendsyntax Markdown linter sibyl-lint markdownlint
+extendsyntax Markdown formatter sibyl-fmt markdownlint
+
+extendsyntax PHP linter sibyl-lint phpcs
+extendsyntax PHP formatter sibyl-fmt phpcbf
+
+extendsyntax python linter sibyl-lint flake8
+extendsyntax python formatter sibyl-fmt autopep8
+
+extendsyntax Ruby linter sibyl-lint rubocop
+extendsyntax Ruby formatter sibyl-fmt rubocop
+
+extendsyntax Rust linter sibyl-lint clippy
+extendsyntax Rust formatter sibyl-fmt rustfmt
+
+extendsyntax SQL linter sibyl-lint sqlfluff
+extendsyntax SQL formatter sibyl-fmt sqlfluff

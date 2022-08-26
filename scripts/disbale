@@ -1,0 +1,3 @@
+#!/bin/sh
+rm /usr/local/bin/sibyl-lint
+rm /usr/local/bin/sibyl-fmt
