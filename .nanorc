@@ -1,6 +1,6 @@
 bind M-D linter all
 
-include ./.sibyl-nano/sintaxhl.nanorc/*.nanorc
+include ./sintaxhl.nanorc/*.nanorc
 
 extendsyntax C linter sibyl-lint clang-tidy
 extendsyntax C formatter sibyl-fmt clang-format
