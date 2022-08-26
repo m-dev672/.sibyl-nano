@@ -1,4 +1,4 @@
-bind F1 linter all
+bind M-D linter all
 
 include ./.sibyl-nano/sintaxhl.nanorc/*.nanorc
 
