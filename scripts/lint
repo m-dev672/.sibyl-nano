@@ -1,3 +1,0 @@
-#!/bin/sh
-SIBYL_API_BASE_URL=https://localhost:3000
-curl --insecure $SIBYL_API_BASE_URL/linter/$1 -F file=@$2

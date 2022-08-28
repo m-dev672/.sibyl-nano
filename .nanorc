@@ -1,5 +1,5 @@
-bind M-D linter all
-bind M-F formatter all
+bind ^D linter all
+bind ^F formatter all
 
 include ~/.sibyl-nano/syntaxhl.nanorc/*.nanorc
 

@@ -1,0 +1,29 @@
+#!/bin/sh
+BASE_URL=https://localhost:3000
+
+while getopts adu:l:f:F: optKey; do
+  case "$optKey" in
+    a )
+      echo "ln -s $(cd $(dirname $0); pwd)/sibyl-client /usr/local/bin/sibyl-client"
+      exit 0
+      ;;
+    d )
+      echo "rm /usr/local/bin/sibyl-client"
+      exit 0
+      ;;
+    u )
+      BASE_URL=${OPTARG}
+      ;;
+    l )
+      CMD='curl --silent --insecure $BASE_URL/linter/'"${OPTARG}"' -F file=@$FILE'
+      ;;
+    f )
+      CMD='curl --silent --insecure $BASE_URL/fmt/'"${OPTARG}"' -F file=@$FILE > $FILE'
+      ;;
+    F )
+      FILE=${OPTARG}
+      ;;
+  esac
+done
+
+eval echo $CMD

@@ -1,3 +1,0 @@
-#!/bin/sh
-ln -s $(cd $(dirname $0); pwd)/lint /usr/local/bin/sibyl-lint
-ln -s $(cd $(dirname $0); pwd)/fmt /usr/local/bin/sibyl-fmt
