@@ -4,11 +4,11 @@ BASE_URL=https://localhost:3000
 while getopts adu:l:f:F: optKey; do
   case "$optKey" in
     a )
-      echo "ln -s $(cd $(dirname $0); pwd)/sibyl-client /usr/local/bin/sibyl-client"
+      ln -s $(cd $(dirname $0); pwd)/sibyl-client /usr/local/bin/sibyl-client
       exit 0
       ;;
     d )
-      echo "rm /usr/local/bin/sibyl-client"
+      rm /usr/local/bin/sibyl-client
       exit 0
       ;;
     u )
@@ -26,4 +26,4 @@ while getopts adu:l:f:F: optKey; do
   esac
 done
 
-eval echo $CMD
+eval $CMD

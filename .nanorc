@@ -3,41 +3,41 @@ bind ^F formatter all
 
 include ~/.sibyl-nano/syntaxhl.nanorc/*.nanorc
 
-extendsyntax C linter sibyl-lint clang-tidy
-extendsyntax C formatter sibyl-fmt clang-format
+extendsyntax C linter sibyl-client -l clang-tidy -F 
+extendsyntax C formatter sibyl-client -f clang-format -F 
 
-extendsyntax Elixir linter sibyl-lint credo
-extendsyntax Elixir formatter sibyl-fmt mix-format
+extendsyntax Elixir linter sibyl-client -l credo -F 
+extendsyntax Elixir formatter sibyl-client -f mix-format -F 
 
-extendsyntax GO linter sibyl-lint staticcheck
-extendsyntax GO formatter sibyl-fmt go-fmt
+extendsyntax GO linter sibyl-client -l staticcheck -F 
+extendsyntax GO formatter sibyl-client -f go-fmt -F 
 
-extendsyntax HTML linter sibyl-lint htmlhint
-extendsyntax HTML formatter sibyl-fmt prettier
+extendsyntax HTML linter sibyl-client -l htmlhint -F 
+extendsyntax HTML formatter sibyl-client -f prettier -F 
 
-extendsyntax CSS linter sibyl-lint stylelint
-extendsyntax CSS formatter sibyl-fmt prettier
+extendsyntax CSS linter sibyl-client -l stylelint -F 
+extendsyntax CSS formatter sibyl-client -f prettier -F 
 
-extendsyntax JSON linter sibyl-lint jsonlint
-extendsyntax JSON formatter sibyl-fmt prettier
+extendsyntax JSON linter sibyl-client -l jsonlint -F 
+extendsyntax JSON formatter sibyl-client -f prettier -F 
 
-extendsyntax JavaScript linter sibyl-lint eslint
-extendsyntax JavaScript formatter sibyl-fmt eslint
+extendsyntax JavaScript linter sibyl-client -l eslint -F 
+extendsyntax JavaScript formatter sibyl-client -f eslint -F 
 
-extendsyntax Markdown linter sibyl-lint markdownlint
-extendsyntax Markdown formatter sibyl-fmt markdownlint
+extendsyntax Markdown linter sibyl-client -l markdownlint -F 
+extendsyntax Markdown formatter sibyl-client -f markdownlint -F 
 
-extendsyntax PHP linter sibyl-lint phpcs
-extendsyntax PHP formatter sibyl-fmt phpcbf
+extendsyntax PHP linter sibyl-client -l phpcs -F 
+extendsyntax PHP formatter sibyl-client -f phpcbf -F 
 
-extendsyntax python linter sibyl-lint flake8
-extendsyntax python formatter sibyl-fmt autopep8
+extendsyntax python linter sibyl-client -l flake8 -F 
+extendsyntax python formatter sibyl-client -f autopep8 -F 
 
-extendsyntax Ruby linter sibyl-lint rubocop
-extendsyntax Ruby formatter sibyl-fmt rubocop
+extendsyntax Ruby linter sibyl-client -l rubocop -F 
+extendsyntax Ruby formatter sibyl-client -f rubocop -F 
 
-extendsyntax Rust linter sibyl-lint clippy
-extendsyntax Rust formatter sibyl-fmt rustfmt
+extendsyntax Rust linter sibyl-client -l clippy -F 
+extendsyntax Rust formatter sibyl-client -f rustfmt -F 
 
-extendsyntax SQL linter sibyl-lint sqlfluff
-extendsyntax SQL formatter sibyl-fmt sqlfluff
+extendsyntax SQL linter sibyl-client -l sqlfluff -F 
+extendsyntax SQL formatter sibyl-client -f sqlfluff -F 
